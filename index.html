@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b2b">
+  <meta name="description" content="Find work, customers, services and income opportunities in Nigeria.">
+  <title>FindOpportunitiesNG | Find Work. Find Customers.</title>
+  <style>
+    :root{--green:#123b2b;--accent:#20a568;--light:#f3f8f5;--text:#17251e}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    header{background:var(--green);color:white;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .brand{font-size:22px;font-weight:800;letter-spacing:-.5px}
+    .brand span{color:#72e5a8}
+    nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
+    .hero{background:linear-gradient(140deg,#123b2b,#176b48);color:white;padding:54px 6% 48px}
+    .hero h1{font-size:clamp(32px,6vw,52px);line-height:1.12;margin:0 0 16px;max-width:680px}
+    .hero p{max-width:600px;color:#e0f2e7}
+    .search{display:flex;gap:8px;max-width:680px;margin-top:25px}
+    input,select,textarea{font:inherit;padding:12px;border:1px solid #d1ddd5;border-radius:9px;width:100%;background:white;color:#17251e}
+    button{font:inherit;font-weight:700;border:0;border-radius:9px;padding:12px 17px;cursor:pointer}
+    .primary{background:var(--accent);color:white}
+    .search input{flex:1;min-width:0}
+    main{max-width:1100px;margin:auto;padding:30px 5%}
+    h2{font-size:25px;margin:0 0 8px}
+    .muted{color:#617167}
+    .categories{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 25px}
+    .chip{background:var(--light);border:1px solid #dce8df;color:var(--green);padding:8px 13px;border-radius:30px}
+    .chip.active{background:var(--green);color:white}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+    .card{border:1px solid #e0e9e3;border-radius:14px;padding:18px;background:white;box-shadow:0 4px 15px #102f1a08}
+    .tag{display:inline-block;font-size:12px;background:#e4f5ea;color:#176b48;padding:4px 9px;border-radius:20px}
+    .card h3{margin:12px 0 5px;font-size:19px}
+    .card p{color:#617167;font-size:14px}
+    .card .type{font-size:13px;color:#176b48;font-weight:bold}
+    .section{margin-bottom:42px}
+    .notice{background:#fff7df;border:1px solid #f2df9b;border-radius:10px;padding:12px 15px;font-size:13px}
+    form{display:grid;gap:13px;max-width:650px}
+    label{font-weight:700;font-size:14px}
+    label input,label select,label textarea{display:block;margin-top:5px;font-weight:400}
+    footer{background:#102e22;color:#e1eee6;padding:28px 5%;text-align:center;font-size:13px}
+    .empty{padding:25px;text-align:center;background:var(--light);border-radius:12px}
+    @media(max-width:520px){header{align-items:flex-start}.brand{font-size:19px}nav a{margin:0 10px 0 0}.hero{padding-top:40px}.search{flex-direction:column}.search button{width:100%}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="brand">FindOpportunities<span>NG</span></div>
+  <nav><a href="#opportunities">Explore</a><a href="#post">Post an opportunity</a></nav>
+</header>
+
+<section class="hero">
+  <h1>Find work. Find customers. Discover opportunities.</h1>
+  <p>A place to discover work, connect with customers, promote your skills and find business opportunities across Nigeria.</p>
+  <form class="search" id="searchForm">
+    <input id="searchInput" aria-label="Search opportunities" placeholder="Search jobs, skills, services...">
+    <button class="primary" type="submit">Search</button>
+  </form>
+</section>
+
+<main>
+  <section class="section" id="opportunities">
+    <h2>Explore opportunities</h2>
+    <p class="muted">Browse by category and find something that fits your skills.</p>
+    <div class="categories" id="categories">
+      <button class="chip active" data-category="All">All</button>
+      <button class="chip" data-category="Jobs">Jobs</button>
+      <button class="chip" data-category="Services">Services</button>
+      <button class="chip" data-category="Customers">Find customers</button>
+      <button class="chip" data-category="Business">Business</button>
+      <button class="chip" data-category="Skills">Skills</button>
+    </div>
+    <div class="grid" id="listingGrid">
+      <article class="card" data-category="Jobs">
+        <span class="tag">DEMO LISTING</span><h3>Part-time shop assistant</h3>
+        <p>Example listing to demonstrate the website. Replace with a verified real opportunity.</p>
+        <div class="type">Jobs · Example only</div>
+      </article>
+      <article class="card" data-category="Services">
+        <span class="tag">DEMO LISTING</span><h3>Promote your services</h3>
+        <p>Advertise services such as tailoring, repairs, design, tutoring or cleaning.</p>
+        <div class="type">Services · Example only</div>
+      </article>
+      <article class="card" data-category="Customers">
+        <span class="tag">DEMO LISTING</span><h3>Connect with customers</h3>
+        <p>Showcase your skills and let potential customers learn what you offer.</p>
+        <div class="type">Customers · Example only</div>
+      </article>
+      <article class="card" data-category="Business">
+        <span class="tag">DEMO LISTING</span><h3>Small business opportunities</h3>
+        <p>Discover business ideas, collaborations and local service opportunities.</p>
+        <div class="type">Business · Example only</div>
+      </article>
+    </div>
+    <p class="notice">These are demonstration examples, not confirmed vacancies or guaranteed income. Verify opportunities before sending money or personal information.</p>
+  </section>
+
+  <section class="section" id="post">
+    <h2>Post an opportunity</h2>
+    <p class="muted">Create a draft listing on this device.</p>
+    <form id="postForm">
+      <label>Listing title<input id="title" required maxlength="90" placeholder="e.g. Seeking a graphic designer"></label>
+      <label>Category<select id="category"><option>Jobs</option><option>Services</option><option>Customers</option><option>Business</option><option>Skills</option></select></label>
+      <label>Location in Nigeria<input id="location" required maxlength="80" placeholder="e.g. Enugu or Remote"></label>
+      <label>Description<textarea id="description" required maxlength="700" rows="4" placeholder="Describe the opportunity clearly"></textarea></label>
+      <label>Contact information (optional)<input id="contact" maxlength="120" placeholder="Business email or public contact"></label>
+      <button class="primary" type="submit">Save draft listing</button>
+    </form>
+    <p class="muted" id="formMessage" role="status"></p>
+    <p class="notice">Prototype notice: drafts are saved only in this browser. They are not published for other visitors. Never post passwords, bank PINs or sensitive personal details.</p>
+    <div class="grid" id="userListings"></div>
+  </section>
+</main>
+
+<footer>
+  <strong>FindOpportunitiesNG</strong><br>
+  Helping people discover work, customers and opportunities in Nigeria.<br>
+  Always verify listings. No earnings are guaranteed.
+</footer>
+
+<script>
+(function(){
+  const searchForm=document.getElementById('searchForm');
+  const searchInput=document.getElementById('searchInput');
+  const cards=[...document.querySelectorAll('#listingGrid .card')];
+  let selected='All';
+  function filter(){
+    const q=searchInput.value.toLowerCase().trim();
+    cards.forEach(card=>{
+      const category=card.dataset.category;
+      card.hidden=!((selected==='All'||selected===category)&&card.textContent.toLowerCase().includes(q));
+    });
+  }
+  searchForm.addEventListener('submit',e=>{e.preventDefault();filter();document.getElementById('opportunities').scrollIntoView({behavior:'smooth'});});
+  document.getElementById('categories').addEventListener('click',e=>{
+    const btn=e.target.closest('button[data-category]');if(!btn)return;
+    selected=btn.dataset.category;
+    document.querySelectorAll('.chip').forEach(b=>b.classList.toggle('active',b===btn));
+    filter();
+  });
+  const postForm=document.getElementById('postForm');
+  const message=document.getElementById('formMessage');
+  const output=document.getElementById('userListings');
+  function showDraft(item){
+    const card=document.createElement('article');card.className='card';
+    const tag=document.createElement('span');tag.className='tag';tag.textContent='YOUR LOCAL DRAFT';
+    const title=document.createElement('h3');title.textContent=item.title;
+    const details=document.createElement('p');details.textContent=item.description;
+    const loc=document.createElement('p');loc.textContent='Location: '+item.location;
+    const type=document.createElement('div');type.className='type';type.textContent=item.category+' · Not publicly shared';
+    card.append(tag,title,details,loc,type);
+    if(item.contact){const contact=document.createElement('p');contact.textContent='Contact: '+item.contact;card.append(contact);}
+    output.prepend(card);
+  }
+  postForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    const item={title:document.getElementById('title').value.trim(),category:document.getElementById('category').value,location:document.getElementById('location').value.trim(),description:document.getElementById('description').value.trim(),contact:document.getElementById('contact').value.trim()};
+    try{
+      const items=JSON.parse(localStorage.getItem('fonng-drafts')||'[]');
+      items.push(item);localStorage.setItem('fonng-drafts',JSON.stringify(items));
+      showDraft(item);message.textContent='Draft saved on this device only.';postForm.reset();
+    }catch(err){message.textContent='Could not save in this browser. Please try again.';}
+  });
+  try{JSON.parse(localStorage.getItem('fonng-drafts')||'[]').forEach(showDraft);}catch(err){}
+})();
+</script>
+</body>
+</html>
